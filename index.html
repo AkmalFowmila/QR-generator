@@ -6,38 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Generator</title>
-    <link rel="fav icon" href="https://i.ibb.co/KFDQxfh/image.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <script type="text/javascript">
-        //src = "https://www.gstatic.com/charts/loader.js" >
-        function qrgen() {
-            var Gapi = "https://chart.googleapis.com/chart?chf=bg,s,65432100&cht=qr&chs=";
+        function genQR() {
+            var gapi = "https://chart.googleapis.com/chart?chf=bg,s,65432100&cht=qr&chs=";
             var myimg = document.getElementById("img");
             var mytext = document.getElementById("qrtext").value;
             var mysize = document.getElementById("size").value;
 
             if (mytext !== "" && mysize == "100") {
-                myimg.src = Gapi + "100*100" + "&chl=" + mytext;
-                // https://chart.googleapis.com/chart?cht=qr&chs=100*100&chl=hello
+                myimg.src = gapi + "100x100" + "&chl=" + mytext;
+                // https://chart.googleapis.com/chart?cht=qr&chs=100x100&chl=hello
             }
+
             else if (mytext !== "" && mysize == "150") {
-                myimg.src = Gapi + "150*150" + "&chl=" + mytext;
+
+                myimg.src = gapi + "150x150" + "&chl=" + mytext;
             }
+
             else if (mytext !== "" && mysize == "200") {
-                myimg.src = Gapi + "200*200" + "&chl=" + mytext;
+                myimg.src = gapi + "200x200" + "&chl=" + mytext;
             }
+
             else if (mytext !== "" && mysize == "250") {
-                myimg.src = Gapi + "250*250" + "&chl=" + mytext;
+                myimg.src = gapi + "250x250" + "&chl=" + mytext;
             }
-            else if (mytext !== "" && mysize == "250") {
-                myimg.src = Gapi + "300*300" + "&chl=" + mytext;
+
+            else if (mytext !== "" && mysize == "300") {
+                myimg.src = gapi + "300x300" + "&chl=" + mytext;
             }
+
             else {
-                alert("Please enter text");
+                alert("Please Enter Text");
             }
+
         }
     </script>
     <div class="grid">
@@ -47,17 +52,20 @@
         </center>
 
         <select id="size">
-            <option value="100">100*100</option>
-            <option value="150">150*150</option>
-            <option value="200">200*200</option>
-            <option value="250" selected>250*250</option>
-            <option value="300">300*300</option>
+            <option value="100">100x100</option>
+            <option value="150">150x150</option>
+            <option value="200">200x200</option>
+            <option value="250" selected>250x250</option>
+            <option value="300">300x300</option>
         </select>
         <br><br>
-        <textarea placeholder="Enter your text" id="qrtext"></textarea>
+        <textarea placeholder="Enter Your Text" id="qrtext"></textarea>
         <br><br>
-        <input type="submit" value="Generate" onclick="qrgen()">
-        <p>Developed by Akmal Fowmila ❤️</p>
+        <input type="submit" value="Generate" onclick="genQR()">
+
+        <p>Developed By Akmal Fowmila ❤️</p>
+
+
     </div>
 </body>
 
