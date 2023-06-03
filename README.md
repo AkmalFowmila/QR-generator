@@ -11,3 +11,6 @@
 
 300x300</p>
 
+<p>You can view the website by clicking the below URL</p>https://qrcodegeneratorasaf.blogspot.com/
+
+
